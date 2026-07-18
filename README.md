@@ -139,14 +139,6 @@ Students can participate in multiple activities, and activities can have multipl
 
 ---
 
-# Team members and their roles
--Kethis Keza ( did member A tasks)
--Adukwu Oche( did member B tasks)
--Bemnet Gebremichael ( did member C tasks)
--Rebecca Isaboke ( did member D tasks and normalization paragraph)
--Rudakemwa Aldo ( did first half of Member E's tasks)
-- Paradis Keza( did junction tables, aggregate and join queries, and readme file)
-
 - ## Team members and their roles
 
 - **Kethia Keza** —  Established the Classroom reference, and built the Students table (Member A) with full DML queries
