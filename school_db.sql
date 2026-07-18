@@ -144,4 +144,11 @@ INSERT INTO Student_Courses (student_id, course_id) VALUES
 (2, 1),
 (3, 3),
 (4, 4);
+CREATE TABLE Student_Activities (
+    student_id INT NOT NULL,
+    activity_id INT NOT NULL,
+    PRIMARY KEY (student_id, activity_id),
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (activity_id) REFERENCES Extra_Curricular_Activities(activity_id)
+);
 
