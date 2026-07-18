@@ -76,6 +76,36 @@ DELETE FROM Faculty WHERE faculty_id = 5;
 SELECT faculty_id, first_name, last_name, email, hire_date FROM Faculty WHERE department = 'Computer Science';
 
 -- ============================================================
+-- MEMBER D: Courses Table
+-- ============================================================
+
+CREATE TABLE Courses (
+    course_id     INT NOT NULL AUTO_INCREMENT,
+    course_name   VARCHAR(100) NOT NULL,
+    credits       INT NOT NULL,
+    faculty_id    INT NOT NULL,
+    classroom_id  INT NOT NULL,
+    PRIMARY KEY (course_id),
+    FOREIGN KEY (faculty_id) REFERENCES Faculty(faculty_id),
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
+
+INSERT INTO Courses (course_name, credits, faculty_id, classroom_id) VALUES
+('Introduction to Databases',        3, 1, 1),
+('Data Structures and Algorithms',   4, 1, 2),
+('Software Engineering Principles',  3, 2, 1),
+('Ethics in Technology',             2, 3, 2),
+('Entrepreneurship in Tech',         3, 4, 1);
+
+UPDATE Courses SET credits = 3 WHERE course_name = 'Ethics in Technology';
+
+DELETE FROM Courses WHERE course_name = 'Entrepreneurship in Tech';
+
+SELECT course_id, course_name, credits, faculty_id, classroom_id
+FROM Courses
+WHERE credits = 3;
+
+-- ============================================================
 -- MEMBER E: Extra_Curricular_Activities Table
 -- ============================================================
 CREATE TABLE IF NOT EXISTS Extra_Curricular_Activities (
