@@ -200,6 +200,19 @@ FROM Classroom
 LEFT JOIN Students
 ON Classroom.classroom_id = Students.classroom_id
 GROUP BY Classroom.classroom_id;
+-- JOIN Query 3: Students and their extracurricular activities, with faculty advisor
+SELECT
+    Students.name AS student_name,
+    Extra_Curricular_Activities.activity_name,
+    CONCAT(Faculty.first_name, ' ', Faculty.last_name) AS advisor
+FROM Students
+JOIN Student_Activities
+  ON Students.student_id = Student_Activities.student_id
+JOIN Extra_Curricular_Activities
+  ON Student_Activities.activity_id = Extra_Curricular_Activities.activity_id
+JOIN Faculty
+  ON Extra_Curricular_Activities.faculty_advisor_id = Faculty.faculty_id;
+  
 -- ============================================================
 -- GROUP TASK: Normalization Discussion
 -- ============================================================
