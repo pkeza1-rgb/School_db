@@ -121,7 +121,13 @@ INSERT INTO Extra_Curricular_Activities (activity_name, category, faculty_adviso
 ('Football Club', 'Sports', 1),
 ('Coding Club', 'Technology', 2),
 ('Debate Club', 'Academic', 3),
-    -- ============================================================
+('Music Club', 'Arts', 4),
+('Volleyball Club', 'Sports', 1);
+
+UPDATE Extra_Curricular_Activities SET category = 'STEM' WHERE activity_id = 2;
+DELETE FROM Extra_Curricular_Activities WHERE activity_id = 5;
+SELECT activity_id, activity_name, category FROM Extra_Curricular_Activities WHERE category = 'Sports'; 
+ -- ============================================================
 -- MEMBER E: Junction Tables (Student_Courses, Student_Activities)
 -- ============================================================
 
@@ -132,12 +138,6 @@ CREATE TABLE Student_Courses (
     FOREIGN KEY (student_id) REFERENCES Students(student_id),
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
-('Music Club', 'Arts', 4),
-('Volleyball Club', 'Sports', 1);
-
-UPDATE Extra_Curricular_Activities SET category = 'STEM' WHERE activity_id = 2;
-DELETE FROM Extra_Curricular_Activities WHERE activity_id = 5;
-SELECT activity_id, activity_name, category FROM Extra_Curricular_Activities WHERE category = 'Sports'; 
 INSERT INTO Student_Courses (student_id, course_id) VALUES
 (1, 1),
 (1, 2),
