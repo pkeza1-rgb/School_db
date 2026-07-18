@@ -39,3 +39,34 @@ WHERE faculty_id = 5;
 SELECT faculty_id, first_name, last_name, email, hire_date
 FROM Faculty
 WHERE department = 'Computer Science';
+-- ============================================================
+-- MEMBER E: Extra_Curricular_Activities Table
+-- ============================================================
+
+CREATE TABLE Extra_Curricular_Activities (
+    activity_id INT NOT NULL AUTO_INCREMENT,
+    activity_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    faculty_advisor_id INT NOT NULL,
+    PRIMARY KEY (activity_id),
+    FOREIGN KEY (faculty_advisor_id)
+        REFERENCES Faculty(faculty_id)
+);
+INSERT INTO Extra_Curricular_Activities
+(activity_name, category, faculty_advisor_id)
+VALUES
+('Football Club', 'Sports', 1),
+('Coding Club', 'Technology', 2),
+('Debate Club', 'Academic', 3),
+('Music Club', 'Arts', 4),
+('Volleyball Club', 'Sports', 1);
+UPDATE Extra_Curricular_Activities
+SET category = 'STEM'
+WHERE activity_id = 2;
+DELETE FROM Extra_Curricular_Activities
+WHERE activity_id = 5;SELECT activity_id,
+       activity_name,
+       category
+FROM Extra_Curricular_Activities
+WHERE category = 'Sports';
+
