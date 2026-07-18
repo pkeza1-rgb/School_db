@@ -121,6 +121,17 @@ INSERT INTO Extra_Curricular_Activities (activity_name, category, faculty_adviso
 ('Football Club', 'Sports', 1),
 ('Coding Club', 'Technology', 2),
 ('Debate Club', 'Academic', 3),
+    -- ============================================================
+-- MEMBER E: Junction Tables (Student_Courses, Student_Activities)
+-- ============================================================
+
+CREATE TABLE Student_Courses (
+    student_id INT NOT NULL,
+    course_id  INT NOT NULL,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
+);
 ('Music Club', 'Arts', 4),
 ('Volleyball Club', 'Sports', 1);
 
