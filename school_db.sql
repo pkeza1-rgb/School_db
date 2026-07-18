@@ -158,3 +158,6 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (4, 4),
 (1, 2);
 
+-- ============================================================
+-- GROUP TASK: Normalization Discussion
+-- ============================================================
