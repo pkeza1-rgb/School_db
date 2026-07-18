@@ -14,6 +14,11 @@ CREATE TABLE IF NOT EXISTS Classroom (
 INSERT INTO Classroom (room_number, building, capacity) VALUES 
 ('Room 101', 'MH1', 30),
 ('Room 102', 'MH2', 25);
+-- Additional Classroom rows to meet 5-row minimum (added by Rebecca)
+INSERT INTO Classroom (room_number, building, capacity) VALUES
+('Room 201', 'MH2', 40),
+('Lab A', 'Science Block', 20),
+('Aud Max', 'Main Campus', 150);
 
 -- Member B Operations
 UPDATE Classroom SET capacity = 35 WHERE room_number = 'Room 102';
