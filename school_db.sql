@@ -162,7 +162,44 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (3, 3),
 (4, 4),
 (1, 2);
+-- ============================================================
+-- MEMBER E: Advanced Queries (JOIN and Aggregate Queries)
+-- ============================================================
 
+-- JOIN Query 1: Display students with their classroom information
+SELECT 
+    Students.student_id,
+    Students.name,
+    Students.email,
+    Classroom.room_number,
+    Classroom.building,
+    Classroom.capacity
+FROM Students
+JOIN Classroom 
+ON Students.classroom_id = Classroom.classroom_id;
+
+
+-- JOIN Query 2: Display students and the courses they are enrolled in
+SELECT
+    Students.name AS student_name,
+    Courses.course_name,
+    Courses.credits
+FROM Students
+JOIN Student_Courses
+ON Students.student_id = Student_Courses.student_id
+JOIN Courses
+ON Student_Courses.course_id = Courses.course_id;
+
+
+-- Aggregate Query: Count the number of students in each classroom
+SELECT
+    Classroom.room_number,
+    Classroom.building,
+    COUNT(Students.student_id) AS total_students
+FROM Classroom
+LEFT JOIN Students
+ON Classroom.classroom_id = Students.classroom_id
+GROUP BY Classroom.classroom_id;
 -- ============================================================
 -- GROUP TASK: Normalization Discussion
 -- ============================================================
