@@ -1,3 +1,57 @@
+CREATE DATABASE IF NOT EXISTS alu_db;
+USE alu_db;
+
+-- =========================================
+CREATE TABLE IF NOT EXISTS Classroom (
+    classroom_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_number VARCHAR(10) NOT NULL,
+    building VARCHAR(50) NOT NULL,
+    capacity INT NOT NULL
+);
+
+INSERT INTO Classroom (room_number, building, capacity) VALUES 
+('Room 101', 'MH1', 30),
+('Room 102', 'MH2', 25);
+
+-- 
+-- MEMBER A: Students Table (kethia-keza)
+-- ==========================================
+
+CREATE TABLE IF NOT EXISTS Students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    classroom_id INT,
+    enrollment_date DATE NOT NULL,
+    FOREIGN KEY (classroom_id) REFERENCES Classroom(classroom_id)
+);
+
+INSERT INTO Students (name, email, classroom_id, enrollment_date) VALUES
+('Alice Iradukunda', 'a.iradukunda@alustudent.com', 1, '2025-09-01'),
+('Bob Mugisha', 'b.mugisha@alustudent.com', 1, '2025-09-01'),
+('Chloe Keza', 'c.keza@alustudent.com', 2, '2026-01-15'),
+('David Nshuti', 'd.nshuti@alustudent.com', 2, '2026-01-15'),
+('Eva Umuhoza', 'e.umuhoza@alustudent.com', 1, '2026-05-10');
+
+UPDATE Students 
+SET email = 'chloe.keza26@alustudent.com' 
+WHERE student_id = 3;
+
+DELETE FROM Students 
+WHERE student_id = 5;
+
+
+SELECT student_id, name, email, classroom_id 
+FROM Students 
+WHERE classroom_id = 1;
+-- MEMBER C: Faculty Table
+-- ==========================================================
+CREATE TABLE Faculty (
+    faculty_id INT AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY (faculty_id)
+);
 -- ============================================================
 -- ALU School Database
 -- ============================================================
