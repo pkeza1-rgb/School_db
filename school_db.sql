@@ -161,4 +161,16 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 -- ============================================================
 -- GROUP TASK: Normalization Discussion
 -- ============================================================
-# Our schema avoids repeating data by referencing related records through foreign keys rather than duplicating their details. Courses stores only 'faculty_id' and 'classroom_id' rather than repeating faculty names or room information that data lives once, in 'Faculty' and 'Classroom'. 'Extra_Curricular_Activities' does the same with 'faculty_advisor_id'. The many-to-many relationships between students and courses, and students and activities, are handled through dedicated junction tables (Student_Courses, Student_Activities) rather than storing repeating lists inside 'Students' or 'Courses' every enrollment or participation is stored as a single row pairing two IDs, with no duplicated student, course, or activity data.
+/*
+Our schema avoids repeating data by referencing related records through 
+foreign keys instead of duplicating their details. Courses stores only 
+faculty_id and classroom_id instead of repeating faculty names or room 
+information in Faculty and Classroom. 
+Extra_Curricular_Activities does the same with faculty_advisor_id. The 
+many-to-many relationships between students and courses, and students 
+and activities, are handled through dedicated junction tables 
+(Student_Courses, Student_Activities) rather than storing repeating 
+lists inside Students or Courses every enrollment or participation is 
+stored as a single row pairing two IDs, with no duplicated student, 
+course, or activity data.
+*/
