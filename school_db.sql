@@ -138,3 +138,10 @@ CREATE TABLE Student_Courses (
 UPDATE Extra_Curricular_Activities SET category = 'STEM' WHERE activity_id = 2;
 DELETE FROM Extra_Curricular_Activities WHERE activity_id = 5;
 SELECT activity_id, activity_name, category FROM Extra_Curricular_Activities WHERE category = 'Sports'; 
+INSERT INTO Student_Courses (student_id, course_id) VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 3),
+(4, 4);
+
