@@ -143,7 +143,7 @@ Students can participate in multiple activities, and activities can have multipl
 -Kethis Keza ( did member A tasks)
 -Adukwu Oche( did member B tasks)
 -Bemnet Gebremichael ( did member C tasks)
--Rebecca Isaboke ( did member D tasks and aggregate queries)
+-Rebecca Isaboke ( did member D tasks and normalization paragraph)
 -Rudakemwa Aldo ( did first half of member E tasks)
-- Paradis Keza( did junction tables and readme file)
+- Paradis Keza( did junction tables, aggregate and join queries, and readme file)
 
