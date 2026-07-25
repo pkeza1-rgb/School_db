@@ -4,10 +4,10 @@
 
 This project is a relational database system designed for **African Leadership University (ALU)** to manage academic information. The database stores and manages information about students, classrooms, faculty members, courses, and extracurricular activities.
 
-The database was developed collaboratively by group members, with each member responsible for designing and implementing specific tables and operations as the individual commits highlights.
+The database was developed collaboratively by group members, with each member responsible for designing and implementing specific tables and operations as the individual commits highlight.
 
 ## Database Name
-We decided to name the datase "alu_db".
+We decided to name the database "alu_db".
 
 ## Technologies Used
 
@@ -140,13 +140,13 @@ Students can participate in multiple activities, and activities can have multipl
 ---
 
 - ## Team members and their roles
-
 ## Team Members and Roles
 
-- Kethia Keza (Member A): Designed and implemented the Students table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. 
-- Adukwu Oche (Member B): Designed and implemented the Classroom table, including classroom records and classroom operations. 
-- Bemnet Tenketem (Member C): Designed and implemented the Faculty table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. 
-  -Rebecca Isaboke (Member D): Designed and implemented the Courses table, verified foreign key relationships, contributed JOIN Query 3, and wrote the normalization discussion. 
-- Aldo Rudakemwa (Member E): Designed and implemented the Extra_Curricular_Activities table. 
-- Paradis Keza (Member E): Implemented junction tables (Student_Courses and Student_Activities), JOIN Queries 1–2, Aggregate Query, and README documentation. 
-
+| Member | Responsibility |
+|---|---|
+| Kethia Keza (Member A) | Designed and implemented the Students table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. |
+| Adukwu Oche (Member B) | Designed and implemented the Classroom table, including classroom records and classroom operations. |
+| Bemnet Tenketem (Member C) | Designed and implemented the Faculty table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. |
+| Rebecca Isaboke (Member D) | Designed and implemented the Courses table, verified foreign key relationships, contributed JOIN Query 3, and wrote the normalization discussion. |
+| Aldo Rudakemwa (Member E) | Designed and implemented the Extra_Curricular_Activities table. |
+| Paradis Keza (Member E) | Implemented junction tables (Student_Courses and Student_Activities), JOIN Queries 1–2, Aggregate Query, and README documentation. |
