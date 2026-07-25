@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Classroom (
 INSERT INTO Classroom (room_number, building, capacity) VALUES 
 ('Room 101', 'MH1', 30),
 ('Room 102', 'MH2', 25);
--- Additional Classroom rows to meet 5-row minimum (added by Rebecca)
+-- Additional Classroom rows
 INSERT INTO Classroom (room_number, building, capacity) VALUES
 ('Room 201', 'MH2', 40),
 ('Lab A', 'Science Block', 20),
@@ -43,7 +43,7 @@ INSERT INTO Students (name, email, classroom_id, enrollment_date) VALUES
 ('Chloe Keza', 'c.keza@alustudent.com', 2, '2026-01-15'),
 ('David Nshuti', 'd.nshuti@alustudent.com', 2, '2026-01-15'),
 ('Eva Umuhoza', 'e.umuhoza@alustudent.com', 1, '2026-05-10');
-
+-- Kethia Keza: Students Operations
 UPDATE Students 
 SET email = 'chloe.keza26@alustudent.com' 
 WHERE student_id = 3;
