@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS alu_db;
 USE alu_db;
 
 -- =========================================
--- MEMBER B: Classroom Table by Adukwu Oche
+-- Adukwu Oche: Classroom Table 
 -- =========================================
 CREATE TABLE IF NOT EXISTS Classroom (
     classroom_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,13 +20,13 @@ INSERT INTO Classroom (room_number, building, capacity) VALUES
 ('Lab A', 'Science Block', 20),
 ('Aud Max', 'Main Campus', 150);
 
--- Member B Operations
+--  Operations
 UPDATE Classroom SET capacity = 35 WHERE room_number = 'Room 102';
 DELETE FROM Classroom WHERE room_number = 'Room 301';
 SELECT * FROM Classroom WHERE capacity >= 25;
 
 -- ==========================================
--- MEMBER A: Students Table by Kethia Keza
+-- Kethia Keza: Students Table 
 -- ==========================================
 CREATE TABLE IF NOT EXISTS Students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +56,7 @@ FROM Students
 WHERE classroom_id = 1;
 
 -- ============================================================
--- MEMBER C: Faculty Table by Bemnet Tenketem 
+-- Bemnet Tenketem: Faculty Table
 -- ============================================================
 CREATE TABLE IF NOT EXISTS Faculty (
     faculty_id    INT           NOT NULL AUTO_INCREMENT,
@@ -81,7 +81,7 @@ DELETE FROM Faculty WHERE faculty_id = 5;
 SELECT faculty_id, first_name, last_name, email, hire_date FROM Faculty WHERE department = 'Computer Science';
 
 -- ============================================================
--- MEMBER D Courses Table by Rebecca Isaboke
+-- Rebecca Isaboke: Courses Table
 -- ============================================================
 
 CREATE TABLE Courses (
@@ -111,7 +111,7 @@ FROM Courses
 WHERE credits = 3;
 
 -- ============================================================
--- MEMBER E: Extra_Curricular_Activities Table by Aldo Rudakemwa
+-- Aldo Rudakemwa: Extra_Curricular_Activities Table 
 -- ============================================================
 CREATE TABLE IF NOT EXISTS Extra_Curricular_Activities (
     activity_id INT NOT NULL AUTO_INCREMENT,
@@ -132,9 +132,9 @@ INSERT INTO Extra_Curricular_Activities (activity_name, category, faculty_adviso
 UPDATE Extra_Curricular_Activities SET category = 'STEM' WHERE activity_id = 2;
 DELETE FROM Extra_Curricular_Activities WHERE activity_id = 5;
 SELECT activity_id, activity_name, category FROM Extra_Curricular_Activities WHERE category = 'Sports'; 
- -- ============================================================
--- MEMBER E: Junction Tables (Student_Courses, Student_Activities)
--- ============================================================
+-- ====================================================================
+--  Paradis Keza: Junction Tables (Student_Courses, Student_Activities)
+-- =====================================================================
 
 CREATE TABLE Student_Courses (
     student_id INT NOT NULL,
@@ -163,7 +163,7 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (4, 4),
 (1, 2);
 -- =======================================================================
--- MEMBER E: Advanced Queries (JOIN and Aggregate Queries) by Paradis Keza
+-- Paradis Keza: Advanced Queries (JOIN and Aggregate Queries)
 -- ========================================================================
 
 -- JOIN Query 1: Display students with their classroom information
@@ -190,7 +190,7 @@ ON Students.student_id = Student_Courses.student_id
 JOIN Courses
 ON Student_Courses.course_id = Courses.course_id;
 
--- JOIN Query 3 (Rebecca Isaboke): Students and their extracurricular activities, with faculty advisor
+-- (Rebecca Isaboke): (JOIN Query 3)Students and their extracurricular activities, with faculty advisor
 SELECT
     Students.name AS student_name,
     Extra_Curricular_Activities.activity_name,
