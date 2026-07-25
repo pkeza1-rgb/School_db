@@ -200,7 +200,7 @@ FROM Classroom
 LEFT JOIN Students
 ON Classroom.classroom_id = Students.classroom_id
 GROUP BY Classroom.classroom_id;
--- JOIN Query 3: Students and their extracurricular activities, with faculty advisor
+-- JOIN Query 3 (Rebecca Isaboke): Students and their extracurricular activities, with faculty advisor
 SELECT
     Students.name AS student_name,
     Extra_Curricular_Activities.activity_name,
