@@ -7,7 +7,7 @@ This project is a relational database system designed for **African Leadership U
 The database was developed collaboratively by group members, with each member responsible for designing and implementing specific tables and operations as the individual commits highlights.
 
 ## Database Name
-We decided to name the datase "Alu_db".
+We decided to name the datase "alu_db".
 
 ## Technologies Used
 
@@ -20,7 +20,7 @@ We decided to name the datase "Alu_db".
 
 The database contains the following tables:
 
-### 1. Classroom Table (Member B)
+### 1. Classroom Table (Member B) by Adukwu Oche
 
 Stores information about classrooms available at ALU.
 
@@ -38,7 +38,7 @@ Stores information about classrooms available at ALU.
 
 ---
 
-### 2. Students Table (Member A)
+### 2. Students Table (Member A) by Kethia Keza
 
 Stores student information and their classroom assignments.
 
@@ -58,7 +58,7 @@ Stores student information and their classroom assignments.
 - Delete student records
 - Retrieve students by classroom
 
-### 3. Faculty Table (Member C)
+### 3. Faculty Table (Member C) by Bemnet Tenketem
 
 Stores information about ALU faculty members.
 
@@ -77,7 +77,7 @@ Stores information about ALU faculty members.
 - Delete faculty records
 - Search faculty by department
 
-### 4. Courses Table (Member D)
+### 4. Courses Table (Member D) by Rebecca Isaboke
 
 Stores information about academic courses offered at ALU.
 
@@ -98,7 +98,7 @@ Stores information about academic courses offered at ALU.
 - Delete courses
 - Retrieve courses based on credits
 
-### 5. Extra_Curricular_Activities Table
+### 5. Extra_Curricular_Activities Table by Aldo Rudakemwa
 
 Stores information about student activities and clubs.
 
@@ -117,7 +117,7 @@ Stores information about student activities and clubs.
 - Delete activities
 - Retrieve activities by category
 
-### 6. Student_Courses Junction Table 
+### 6. Student_Courses Junction Table by Paradis Keza
 
 Creates a many-to-many relationship between students and courses.
 
@@ -127,7 +127,7 @@ Creates a many-to-many relationship between students and courses.
 
 A student can enroll in multiple courses, and each course can have multiple students.
 
-### 7. Student_Activities Junction Table 
+### 7. Student_Activities Junction Table by Paradis Keza
 
 Creates a many-to-many relationship between students and extracurricular activities.
 

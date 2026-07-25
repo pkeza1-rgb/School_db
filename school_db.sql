@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS alu_db;
 USE alu_db;
 
 -- =========================================
--- MEMBER B: Classroom Table
+-- MEMBER B: Classroom Table by Adukwu Oche
 -- =========================================
 CREATE TABLE IF NOT EXISTS Classroom (
     classroom_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,7 +26,7 @@ DELETE FROM Classroom WHERE room_number = 'Room 301';
 SELECT * FROM Classroom WHERE capacity >= 25;
 
 -- ==========================================
--- MEMBER A: Students Table
+-- MEMBER A: Students Table by Kethia Keza
 -- ==========================================
 CREATE TABLE IF NOT EXISTS Students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +56,7 @@ FROM Students
 WHERE classroom_id = 1;
 
 -- ============================================================
--- MEMBER C: Faculty Table
+-- MEMBER C: Faculty Table by Bemnet Tenketem 
 -- ============================================================
 CREATE TABLE IF NOT EXISTS Faculty (
     faculty_id    INT           NOT NULL AUTO_INCREMENT,
@@ -81,7 +81,7 @@ DELETE FROM Faculty WHERE faculty_id = 5;
 SELECT faculty_id, first_name, last_name, email, hire_date FROM Faculty WHERE department = 'Computer Science';
 
 -- ============================================================
--- MEMBER D (Rebecca Isaboke) Courses Table
+-- MEMBER D Courses Table by Rebecca Isaboke
 -- ============================================================
 
 CREATE TABLE Courses (
@@ -111,7 +111,7 @@ FROM Courses
 WHERE credits = 3;
 
 -- ============================================================
--- MEMBER E: Extra_Curricular_Activities Table
+-- MEMBER E: Extra_Curricular_Activities Table by Aldo Rudakemwa
 -- ============================================================
 CREATE TABLE IF NOT EXISTS Extra_Curricular_Activities (
     activity_id INT NOT NULL AUTO_INCREMENT,
@@ -162,9 +162,9 @@ INSERT INTO Student_Activities (student_id, activity_id) VALUES
 (3, 3),
 (4, 4),
 (1, 2);
--- ============================================================
--- MEMBER E: Advanced Queries (JOIN and Aggregate Queries)
--- ============================================================
+-- =======================================================================
+-- MEMBER E: Advanced Queries (JOIN and Aggregate Queries) by Paradis Keza
+-- ========================================================================
 
 -- JOIN Query 1: Display students with their classroom information
 SELECT 
@@ -214,7 +214,7 @@ JOIN Faculty
   ON Extra_Curricular_Activities.faculty_advisor_id = Faculty.faculty_id;
   
 -- ============================================================
--- GROUP TASK: Normalization Discussion
+-- GROUP TASK: Normalization Discussion by Rebecca Isaboke
 -- ============================================================
 /*
 Our schema avoids repeating data by referencing related records through 
