@@ -190,16 +190,6 @@ ON Students.student_id = Student_Courses.student_id
 JOIN Courses
 ON Student_Courses.course_id = Courses.course_id;
 
-
--- Aggregate Query: Count the number of students in each classroom
-SELECT
-    Classroom.room_number,
-    Classroom.building,
-    COUNT(Students.student_id) AS total_students
-FROM Classroom
-LEFT JOIN Students
-ON Classroom.classroom_id = Students.classroom_id
-GROUP BY Classroom.classroom_id;
 -- JOIN Query 3 (Rebecca Isaboke): Students and their extracurricular activities, with faculty advisor
 SELECT
     Students.name AS student_name,
@@ -212,6 +202,16 @@ JOIN Extra_Curricular_Activities
   ON Student_Activities.activity_id = Extra_Curricular_Activities.activity_id
 JOIN Faculty
   ON Extra_Curricular_Activities.faculty_advisor_id = Faculty.faculty_id;
+
+-- Aggregate Query: Count the number of students in each classroom
+SELECT
+    Classroom.room_number,
+    Classroom.building,
+    COUNT(Students.student_id) AS total_students
+FROM Classroom
+LEFT JOIN Students
+ON Classroom.classroom_id = Students.classroom_id
+GROUP BY Classroom.classroom_id;
   
 -- ============================================================
 -- GROUP TASK: Normalization Discussion by Rebecca Isaboke
