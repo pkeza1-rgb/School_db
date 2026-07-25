@@ -81,7 +81,7 @@ DELETE FROM Faculty WHERE faculty_id = 5;
 SELECT faculty_id, first_name, last_name, email, hire_date FROM Faculty WHERE department = 'Computer Science';
 
 -- ============================================================
--- MEMBER D: Courses Table
+-- MEMBER D: (Rebecca Isaboke) Courses Table
 -- ============================================================
 
 CREATE TABLE Courses (
