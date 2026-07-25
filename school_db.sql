@@ -1,9 +1,9 @@
 CREATE DATABASE IF NOT EXISTS alu_db;
 USE alu_db;
 
--- =========================================
--- Adukwu Oche: Classroom Table 
--- =========================================
+-- ============================================================
+-- MEMBER B (Adukwu Oche): Classroom Table 
+-- ============================================================
 CREATE TABLE IF NOT EXISTS Classroom (
     classroom_id INT AUTO_INCREMENT PRIMARY KEY,
     room_number VARCHAR(10) NOT NULL,
@@ -13,16 +13,17 @@ CREATE TABLE IF NOT EXISTS Classroom (
 
 INSERT INTO Classroom (room_number, building, capacity) VALUES 
 ('Room 101', 'MH1', 30),
-('Room 102', 'MH2', 25);
--- Additional Classroom rows
-INSERT INTO Classroom (room_number, building, capacity) VALUES
+('Room 102', 'MH2', 25),
 ('Room 201', 'MH2', 40),
 ('Lab A', 'Science Block', 20),
 ('Aud Max', 'Main Campus', 150);
 
---  Operations
+-- MEMBER B (Adukwu Oche): Classroom Operations
 UPDATE Classroom SET capacity = 35 WHERE room_number = 'Room 102';
-DELETE FROM Classroom WHERE room_number = 'Room 301';
+
+-- FIX: Changed 'Room 301' to 'Lab A'
+DELETE FROM Classroom WHERE room_number = 'Lab A';
+
 SELECT * FROM Classroom WHERE capacity >= 25;
 
 -- ==========================================
