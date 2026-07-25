@@ -141,10 +141,12 @@ Students can participate in multiple activities, and activities can have multipl
 
 - ## Team members and their roles
 
-- **Kethia Keza** —  Established the Classroom reference, and built the Students table (Member A) with full DML queries
-- **Adukwu Oche** — Classroom table (Member B)
-- **Bemnet Gebremichael** — Faculty table (Member C): CREATE, INSERT, UPDATE, DELETE, SELECT; fixed the database name to `alu_db`
-- **Rebecca Isaboke** — Courses table (Member D), verified foreign key relationships across all tables, wrote the third join query, and contributed to the normalization discussion
-- **Rudakemwa Aldo** — Extra_Curricular_Activities table (first half of Member E tasks)
-- **Paradis Keza** — Initialized school_db, did the second half of Member E tasks, junction tables (Student_Courses, Student_Activities), Join Queries 1–2, the Aggregate Query, and the README
+## Team Members and Roles
+
+- Kethia Keza (Member A): Designed and implemented the Students table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. 
+- Adukwu Oche (Member B): Designed and implemented the Classroom table, including classroom records and classroom operations. 
+- Bemnet Tenketem (Member C): Designed and implemented the Faculty table, including CREATE, INSERT, UPDATE, DELETE, and SELECT operations. 
+  -Rebecca Isaboke (Member D): Designed and implemented the Courses table, verified foreign key relationships, contributed JOIN Query 3, and wrote the normalization discussion. 
+- Aldo Rudakemwa (Member E): Designed and implemented the Extra_Curricular_Activities table. 
+- Paradis Keza (Member E): Implemented junction tables (Student_Courses and Student_Activities), JOIN Queries 1–2, Aggregate Query, and README documentation. 
 
